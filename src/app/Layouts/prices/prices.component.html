@@ -1,0 +1,40 @@
+<section id="precios" class="bg-bgVerdeClaro py-[70px] text-center">
+    <div *ngIf="!loading; else skeleton">
+        <app-titles>
+            <h3 title>{{title}}</h3>
+            <span subTitle>{{subTitle}}</span>
+            <h4 description>{{description}}</h4>
+        </app-titles>
+        <div>
+            <!-- Botones para seleccionar opciones de precios -->
+            <div class="flex items-center justify-center gap-2 mt-[50px] mb-[40px]">
+                <!--Cada uno de los botones, cambia el valor de la variable checkedInput y el estilo-->
+                <div class="cursor-pointer rounded relative drop-shadow-xl p-4 w-[150px]"
+                    *ngFor="let option of arrayDiscounts$" (click)="changeCheckbox(option.discount)"
+                    [ngClass]="{'bg-nucleo text-white border-white duration-300' : checkedInput() === option.discount, 'duration-300 text-slate-500 bg-white border-2 border-slate-400 ' : checkedInput() !== option.discount}">
+                    {{option.type}}
+
+                    <app-select-discount [discount]="option.discount" />
+
+
+                </div>
+            </div>
+
+            <!-- planes -->
+            <div class="w-[90%] flex items-center justify-center flex-col lg:flex-row mx-auto gap-4
+                p-4 rounded-xl">
+                <div *ngFor="let plan of arrayPrices$.value; let index = index"
+                    class="flex flex-col items-start shadowCustom justify-start p-4 md:w-[350px] md:min-h-[420px] rounded-xl text-slate-500 relative"
+                    [ngClass]="{'text-white ': plan.isPopular}"
+                    [ngStyle]="{'background-color': plan.isPopular ? '#90C447' : '#fafafa'}">
+
+                    <app-monthly-payments [plan]="plan" [isFreeTrailMode]="isFreeTrailMode" [currency]="currency" />
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #skeleton>
+        <app-skeleton-prices />
+    </ng-template>
+</section>

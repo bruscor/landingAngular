@@ -1,0 +1,15 @@
+.elMasElegido::before,
+.elMasElegido::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  transition: all 0.1s ease-in;
+  border-radius: 20px;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}

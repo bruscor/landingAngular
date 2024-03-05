@@ -1,0 +1,57 @@
+<footer class="style-4" id="footer">
+    <div class="container pt-[60px] mx-auto">
+        <div class="section-head text-center style-4">
+            <app-titles>
+                <h5 title>{{title}}</h5>
+                <span subTitle>{{subTitle}}</span>
+                <h6 description>{{description}}</h6>
+            </app-titles>
+        </div>
+        <div>
+            <div class="flex flex-wrap pl-[25px] lg:pl-[0px] lg:flex-row items-start justify-center gap-2 mx-auto">
+                <ng-container *ngFor="let element of arrayForm">
+                    <a *ngIf="element.href; else noHref" [href]="element.href" target="_blank" class="w-[280px]">
+                        <app-icon-text [element]="element.text"
+                            [icon]="element.icon ? element.icon : 'fa-check'"></app-icon-text>
+                    </a>
+                    <ng-template #noHref>
+                        <app-icon-text class="w-[280px]" [element]="element.text"
+                            [icon]="element.icon ? element.icon : 'fa-check'"></app-icon-text>
+                    </ng-template>
+                </ng-container>
+            </div>
+        </div>
+        <nav class="foot">
+            <div class="flex flex-col md:flex-row align-items-center justify-center gap-2 md:gap-8">
+                <div class="flex items-center justify-center">
+                    <div class="w-[160px]">
+                        <img [src]="imgLogo" alt="" />
+                    </div>
+                </div>
+                <div class="flex align-items-center justify-center">
+                    <ul class=" links">
+                        <li *ngFor="let element of arrayLiFooter">
+                            <a [href]="element.href">
+                                {{element.text}}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <footer class="flex flex-col gap-[20px] copywrite text-center">
+            <small class="small">
+                © {{year}}
+                <a href="http://www.nucleoit.com.ar" target="_blank" class="fw-bold text-decoration-underline">
+                    Núcleo IT
+                </a>
+                . Todos los derechos reservados. 2009 - {{year}}
+            </small>
+            <div class="flex flex-col items-center">
+                <small>Desarrollado por</small>
+                <img [src]="imgFullLogo" alt="logo nucleo it">
+            </div>
+        </footer>
+    </div>
+    <img [src]="imgHero3" alt="" class="wave mt-[60px]" />
+</footer>

@@ -1,0 +1,12 @@
+#demos::before {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background-color: #9994;
+  transform: translateX(-50%);
+}
+
+#demos::before {
+  bottom: 0;
+}

@@ -1,0 +1,38 @@
+#integraciones::after,
+#integraciones::before {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background-color: #9994;
+  transform: translateX(-50%);
+}
+
+#integraciones::after {
+  top: 0;
+}
+
+#integraciones::before {
+  bottom: 0;
+}
+
+.img-apps {
+  width: 130px;
+  height: auto;
+  margin-top: 30px;
+}
+
+.container-img-apps {
+  -webkit-animation: slide_up_down 1.7s ease-in-out infinite alternate both;
+  animation: slide_up_down 1.7s ease-in-out infinite alternate both;
+}
+
+.intg-back {
+  position: absolute;
+  left: 0;
+  bottom: 19%;
+  width: 100%;
+  max-height: unset;
+  -o-object-fit: cover;
+  object-fit: cover;
+}

@@ -1,0 +1,57 @@
+footer.style-4 {
+  position: relative;
+  background-color: #e8eee0;
+  margin-top: 250px;
+}
+footer.style-4 .wave {
+  position: absolute;
+  left: -1px;
+  bottom: 95%;
+  width: 100%;
+  max-width: unset;
+  height: 240px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: top;
+  object-position: top;
+  z-index: 20;
+}
+footer.style-4 .container {
+  position: relative;
+  z-index: 25;
+}
+footer.style-4 .foot {
+  border-bottom: 1px solid #9999;
+  padding: 30px 0 0;
+}
+footer.style-4 .foot .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+footer.style-4 .foot .links li a {
+  font-size: 12px;
+  margin: 0 15px;
+  font-weight: bold;
+}
+footer.style-4 .foot .links li a:hover,
+footer.style-4 .foot .links li a.active {
+  color: var(--color-Verde-Check);
+}
+footer.style-4 .copywrite {
+  padding: 35px 0;
+}
+
+footer.style-4 .foot .links {
+  margin: 30px 0;
+}
+footer.style-4 .foot .links li {
+  width: 50%;
+  margin: 5px 0;
+}
+footer.style-4 .foot .links li a {
+  margin-left: 0;
+}

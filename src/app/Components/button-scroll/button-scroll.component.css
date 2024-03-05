@@ -1,0 +1,21 @@
+.topButton {
+  position: fixed;
+  bottom: 120px;
+  z-index: 555;
+  right: -50px; /* Inicialmente fuera de la pantalla */
+  background: #7ea940;
+  padding: 7px;
+  color: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: right 0.5s ease-in-out; /* Transición para la propiedad right */
+}
+
+.activeScroll {
+  right: 27px; /* Mostrar el botón desplazándolo hacia la derecha */
+}

@@ -1,0 +1,11 @@
+<div>
+    <span class="bg-verdeSubtitles text-verdeNucleo text-[16px] py-2 px-4 rounded">
+        <ng-content select="[subTitle]" />
+    </span>
+    <div class="mt-[25px] mb-[25px] text-[35px] leading-10 font-bold text-verdeNucleo whitespace-pre-line">
+        <ng-content select="[title]" />
+    </div>
+</div>
+<div class="text-slate-500 mb-[25px]" style="white-space: pre-line">
+    <ng-content select="[description]" />
+</div>

@@ -1,0 +1,78 @@
+<section id="testimonios" class="relative">
+    <div id="testimonials" class="py-[60px] relative ">
+        <div class=" max-w-[1170px] px-[15px] relative z-[5] mx-auto">
+            <div class=" flex flex-wrap items-center justify-center xl:gap-12 gap-8">
+                <div class="xl:w-[45%] w-full">
+                    <div>
+
+                        <app-titles>
+                            <h3 title>{{title}}</h3>
+                            <span subTitle>{{subTitle}}</span>
+                            <h4 description>{{description}}</h4>
+                        </app-titles>
+
+                        <div class="flex flex-col items-start justify-center gap-4 mb-[25px]">
+                            <div class="w-full flex items-center justify-start mt-[10px] mb-[30px]">
+                                <div
+                                    class="flex items-start justify-center flex-col pr-[50px] mr-[50px] border-r-2 border-slate-200">
+                                    <div class="icon img-contain text-center bg-nucleo rounded-full p-4">
+                                        <i class="fa-solid fa-users text-white text-[30px]"></i>
+                                    </div>
+                                    <h2 class="text-verdeNucleo text-[30px] font-bold">10K+</h2>
+                                    <p class="text-[10px] text-slate-500">
+                                        Usuarios utilizan nuestro<br /> servicio a diario.
+                                    </p>
+                                </div>
+                                <div class="flex items-start justify-center flex-col">
+                                    <div class="icon img-contain text-center bg-nucleo rounded-full p-4">
+                                        <i class="fa-regular fa-thumbs-up text-white text-[30px]"></i>
+                                    </div>
+                                    <h2 class="text-verdeNucleo text-[30px] font-bold">4.7/5</h2>
+                                    <div class="text-[10px] mb-[5px] text-stars text-center">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-[10px] text-slate-500">
+                                        Clasificación en google.
+                                    </p>
+                                </div>
+                            </div>
+                            <a [href]="buttonHref" target="_blank" rel="noreferrer">
+                                <app-button-gral textButton="Más testimonios" ttypeButton="primary"></app-button-gral>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="xl:w-[45%] w-full">
+                    <div class="flex flex-col gap-4 relative overflow-hidden p-4">
+                        <div class="lg:w-[80%] w-full p-4 border-2 border-slate-200 rounded-lg shadowCustom z-[10] bg-white overflow-hidden"
+                            *ngFor="let testimonio of arrayTestimonials, let i = index"
+                            [style.alignSelf]="i % 2 == 0 ? 'flex-start' : 'flex-end'">
+                            <div class="flex items-center justify-start gap-4">
+                                <div
+                                    class="w-[30px] h-[30px] grid place-items-center bg-bgVerdeClaro text-verdeNucleo rounded-full p-2">
+                                    <span style="line-height: 0px;">{{testimonio.inicial}}</span>
+                                </div>
+                                <p>{{testimonio.nombre}}</p>
+                                <div class="text-[10px] text-stars ">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-[14px] text-slate-500 ">{{testimonio.testimonio}} </p>
+
+                        </div>
+                        <img [src]="imgTesti3" alt="2mobiles" class="absolute testi-globe" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img [src]="aboutWave" alt="" class="absolute w-full bottom-[-2px] rotate-180" />
+</section>

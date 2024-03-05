@@ -1,0 +1,8 @@
+.contentAc {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.acordeon {
+  transition: all 0.3s ease-in-out;
+}

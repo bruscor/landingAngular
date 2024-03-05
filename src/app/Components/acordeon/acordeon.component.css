@@ -1,0 +1,29 @@
+.contentAc {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.labelAc {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.contentAcordeon {
+  position: relative;
+  height: 0;
+  padding: 0px 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.contentAcordeon.active {
+  max-height: 1000px;
+  height: auto;
+  padding: 15px;
+  background: #f4f2fb;
+}
+
+.rotateIcon svg {
+  transform: rotate(180deg);
+}

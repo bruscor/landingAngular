@@ -1,0 +1,9 @@
+<div class="flex items-center justify-between lg:h-[50px] text-slate-700 lg:px-[25px] border-b-2 border-slate-200 duration-300"
+    [ngClass]="{'bg-[#f4f2fb]' : indexSelect === faq.id, 'rotateIcon' : indexSelect === faq.id}">
+    <div class="labelAc font-bold">{{faq.question}}</div>
+    <i class="fa-solid fa-chevron-down text-[10px] duration-300 text-slate-400"></i>
+</div>
+
+<div class="contentAcordeon text-slate-600" [ngClass]="{'active': indexSelect === faq.id}">
+    {{faq.answer}}
+</div>

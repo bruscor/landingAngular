@@ -1,0 +1,31 @@
+<!--Estilos para el plan mas elegido-->
+<section class="flex flex-col items-start">
+    <div *ngIf="plan.isPopular"
+        class="absolute elMasElegido top-[-5px] right-[-3px] w-[100px] h-[100px] px-4 py-2 text-verdeNucleo z-[1] overflow-hidden">
+        <div class="rotate-45 shadowCustom bg-white w-[142px] absolute left-[-2px] top-[10px]">
+            <div class="text-[15px] text-center">El más</div>
+            <div class="text-[15px] text-center">elegido</div>
+        </div>
+    </div>
+
+    <div class="flex items-center justify-start gap-2">
+        <span class="font-bold text-2xl md:text-4xl">{{calculatePlan(plan.prices[currency]) }}</span>
+        <span>/mes</span>
+    </div>
+    <p class="text-left" *ngIf="checkedInput !== 0">{{calculatePrice(plan.prices[currency])}}</p>
+    <h4 class="font-bold text-[30px] mb-[40px] text-left">{{plan.namePlan}}</h4>
+
+    <div class="flex flex-col items-start justify-center gap-2 leading-3">
+        <div *ngFor="let element of plan.items">
+            <app-icon-text [element]="element.text"
+                [icon]="element.includes ? 'fa-solid fa-check' : 'fa-solid fa-xmark text-red-500'"
+                [ngClass]="{'text-white': plan.isPopular && element.includes, 'text-gray-300' : !element.includes, 'font-bold': element.includes}"
+                class="text-left">
+            </app-icon-text>
+        </div>
+    </div>
+
+    <div *ngIf="isFreeTrailMode && plan.namePlan === 'Plan Inicial'" #typeformContainer
+        class="primaryButton m-auto mt-[20px]" data-tf-live="01HPQ3AXQD7KRXG9EKFBGC368P">
+    </div>
+</section>

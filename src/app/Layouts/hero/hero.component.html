@@ -1,0 +1,36 @@
+<main>
+    <section data-scroll-index="0" class="relative py-[60px] overflow-hidden ">
+        <div class="flex items-center justify-center lg:mb-[50px]">
+            <div class="px-[15px] max-w-[1170px] z-10 ">
+                <div class="flex flex-wrap items-start justify-center">
+                    <section id="hero" class="lg:w-[50%] w-full">
+                        <div>
+                            <app-titles>
+                                <h1 title>{{title}}</h1>
+                                <span subTitle>{{subTitle}}</span>
+                                <h3 description>{{description}}<br>{{isFreeTrailMode ? freeTrailDescription :
+                                    noFreeTrailDescription}}</h3>
+                            </app-titles>
+                            <div class="flex items-center justify-start gap-4">
+                                <div class="flex flex-col gap-2 items-center justify-center">
+                                    <div *ngIf="isFreeTrailMode" class="secondaryButton self-start"
+                                        data-tf-live="01HPKZZE78TV70K4WCT0P1Q6BK"></div>
+                                    <a [href]="linkCalendly" target="_blank" rel="noreferrer">
+                                        <app-button-gral textButton="Quiero agendar una demo"></app-button-gral>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="divImg">
+                        <div>
+                            <img [src]="imgHero" alt="imagen principal" class="m-w-full rounded mt-[30px] lg:mt-[0]" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img [src]="imgHero2" alt="burbujas" class="bubble" />
+        </div>
+        <img [src]="imgHero3" alt="fondo movil" class="wave">
+    </section>
+</main>

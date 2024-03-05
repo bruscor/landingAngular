@@ -1,0 +1,11 @@
+.testi-globe {
+  position: absolute;
+  top: -60px;
+  left: -50px;
+  width: 110%;
+  max-height: unset;
+  max-width: unset;
+  opacity: 0.2;
+  -webkit-animation: rotate-center 100s linear infinite both;
+  animation: rotate-center 100s linear infinite both;
+}

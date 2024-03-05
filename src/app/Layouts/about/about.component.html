@@ -1,0 +1,30 @@
+<section id="beneficios" class="relative">
+    <div id="about" class="py-[60px] grid place-items-center relative overflow-hidden">
+        <div class=" max-w-[1170px] px-[15px] relative z-[5]">
+            <div class=" flex flex-wrap items-center justify-center xl:gap-24 gap-8">
+                <div class="xl:w-[45%] w-full">
+                    <div>
+                        <img [src]="imgAbout" alt="2mobiles" />
+                    </div>
+                </div>
+                <div class="xl:w-[45%] w-full">
+                    <div>
+                        <app-titles>
+                            <h2 title>{{title}}</h2>
+                            <span subTitle>{{subTitle}}</span>
+                            <h3 description>{{description}}</h3>
+                        </app-titles>
+                        <div class="flex flex-col items-start justify-center gap-4 mb-[25px]"> <span
+                                *ngFor="let element of arrayElements" class="flex items-center justify-start gap-4">
+                                <app-icon-text [element]="element.text" [icon]="element.icon"></app-icon-text>
+                            </span></div>
+                        <!-- <app-button-gral textButton="Ver video"></app-button-gral> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img [src]="aboutBubles" alt="lineas" class="img-bubles lg:left-0" />
+        <img [src]="aboutLines" alt="about1" class="img-lines" />
+    </div>
+    <img [src]="aboutWave" alt="" class="absolute top-[-2px] w-full" />
+</section>
