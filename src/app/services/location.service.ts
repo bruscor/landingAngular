@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../Environments/environments';
 
-const currency: { [key: string]: string } = {
+export const currency: { [key: string]: string } = {
   AR: 'ARS',
   OTHERS: 'US',
 };

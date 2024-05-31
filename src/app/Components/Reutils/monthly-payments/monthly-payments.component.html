@@ -16,7 +16,7 @@
     <h4 class="font-bold text-[30px] mb-[40px] text-left">{{plan.namePlan}}</h4>
 
     <div class="flex flex-col items-start justify-center gap-2 leading-3">
-        <div *ngFor="let element of plan.items">
+        <div *ngFor="let element of plan.labels[currency]">
             <app-icon-text [element]="element.text"
                 [icon]="element.includes ? 'fa-solid fa-check' : 'fa-solid fa-xmark text-red-500'"
                 [ngClass]="{'text-white': plan.isPopular && element.includes, 'text-gray-300' : !element.includes, 'font-bold': element.includes}"

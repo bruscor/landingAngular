@@ -1,5 +1,5 @@
 <section id="precios" class="bg-bgVerdeClaro py-[70px] text-center">
-    <div *ngIf="!loading; else skeleton">
+    <div *ngIf="!loading && arrayPrices$; else skeleton">
         <app-titles>
             <h3 title>{{title}}</h3>
             <span subTitle>{{subTitle}}</span>
@@ -31,6 +31,11 @@
                     <app-monthly-payments [plan]="plan" [isFreeTrailMode]="isFreeTrailMode" [currency]="currency" />
 
                 </div>
+            </div>
+            <div *ngIf="!isARG">
+
+                <h4 class="text-slate-500 mb-[25px]" style="white-space: pre-line">{{descriptionAddFE}}</h4>
+
             </div>
         </div>
     </div>

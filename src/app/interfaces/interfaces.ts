@@ -31,6 +31,9 @@ export interface Planes {
   items: Array<ItemsPlan>;
   textButton?: string;
   isPopular: boolean;
+  labels: {
+    [key: string]: Array<ItemsPlan>;
+  };
 }
 
 export interface Price {
@@ -60,4 +63,5 @@ export interface ItemsPlan {
 export interface Settings {
   id: string;
   isFreeTrailMode: boolean;
+  priceToAddFE: number;
 }

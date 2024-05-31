@@ -12,8 +12,8 @@ export class AppComponent implements OnInit {
   constructor(private settingsService: SettingsService) {}
 
   ngOnInit(): void {
-    this.settingsService.getSettings().subscribe(({ settings }) => {
-      this.isFreeTrailMode = settings.isFreeTrailMode;
+    this.settingsService.getSettings().subscribe((settings: any) => {
+      this.isFreeTrailMode = settings.plans[0].isFreeTrailMode;
     });
   }
 }

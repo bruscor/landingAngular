@@ -10,8 +10,8 @@ import { environment } from '../Environments/environments';
 export class SettingsService {
   constructor(private http: HttpClient) {}
 
-  getSettings(): Observable<{ settings: Settings }> {
-    return this.http.get<{ settings: Settings }>(
+  getSettings(): Observable<{ plans: Settings }> {
+    return this.http.get<{ plans: Settings }>(
       environment.API_DB_URL + environment.URL_SETTINGS,
     );
   }
