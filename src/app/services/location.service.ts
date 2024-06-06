@@ -32,6 +32,8 @@ export class LocationService {
   async getLocation(region: string, country_code: string) {
     this.userLocation = region;
     const country: string = country_code.toUpperCase();
-    this.userCurrency = currency['OTHERS'];
+    this.userCurrency = currency[country]
+      ? currency[country]
+      : currency['OTHERS'];
   }
 }
