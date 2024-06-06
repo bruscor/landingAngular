@@ -27,7 +27,7 @@ export interface FormElements {
 export interface Planes {
   id: number;
   namePlan: string;
-  prices: Price;
+  prices: { [key: string]: Price };
   items: Array<ItemsPlan>;
   textButton?: string;
   isPopular: boolean;
@@ -37,9 +37,9 @@ export interface Planes {
 }
 
 export interface Price {
-  [key: string]: number;
+  oldPrice?: number;
+  currentPrice: number;
 }
-
 export interface Discount {
   id: string;
   type: string;
