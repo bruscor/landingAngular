@@ -65,13 +65,13 @@ export class PricesComponent {
         this.currency
       }$ ${this.arrayPrices$.value[0].prices[
         this.currency
-      ].toLocaleString()}. \n Incluye facturación electrónica y pedidos ilimitados`;
+      ].currentPrice.toLocaleString()}. \n Incluye facturación electrónica y pedidos ilimitados`;
     } else {
       this.title = `Optimiza la gestión de tu negocio desde ${
         this.currency
       }$ ${this.arrayPrices$.value[0].prices[
         this.currency
-      ].toLocaleString()}. \n Incluye pedidos ilimitados`;
+      ].currentPrice.toLocaleString()}. \n Incluye pedidos ilimitados`;
     }
   }
 
